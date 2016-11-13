@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Articles</h1>
+<h1>Listing Articles kombajn</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Je to bagr?</th>
       <th>Title</th>
       <th>Text</th>
       <th>Is published</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
+        <td>NE</td>
         <td><%= article.title %></td>
         <td><%= article.text %></td>
         <td><%= article.is_published %></td>
