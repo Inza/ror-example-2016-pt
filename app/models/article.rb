@@ -9,6 +9,11 @@
 #  published_at :datetime
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  category_id  :integer
+#
+# Indexes
+#
+#  index_articles_on_category_id  (category_id)
 #
 
 class Article < ActiveRecord::Base
