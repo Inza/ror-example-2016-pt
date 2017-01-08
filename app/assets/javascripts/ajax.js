@@ -7,6 +7,6 @@ $(document).ready(function() {
 
         content.append("<p>Kuk</p>");
 
-        return false;
+        return false; // this is needed to prevent default <a> behavior (= redirect)
     });
 });
