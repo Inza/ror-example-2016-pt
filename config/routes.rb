@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles do
+    collection do
+      get 'ajax'
+    end
+  end
 
   root 'articles#index'
 
