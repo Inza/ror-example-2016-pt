@@ -3,9 +3,15 @@
 $(document).ready(function() {
     $("a[data-ajax]").click(function(){
         var link = $(this);
-        var content = $("div[data-ajax-content]");
+        var path = link.attr("data-href");
 
-        content.append("<p>Kuk</p>");
+        $.getScript(path)
+            .done(function(script, textStatus) {
+                console.log(textStatus);
+            })
+            .fail(function(jqxhr, settings, exception) {
+                console.log("AJAX loading failed");
+            });
 
         return false; // this is needed to prevent default <a> behavior (= redirect)
     });
