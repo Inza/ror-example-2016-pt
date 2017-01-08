@@ -12,6 +12,10 @@ class ArticlesController < ApplicationController
   def show
   end
 
+  def ajax
+    @text = 'I have been loaded with AJAX'
+  end
+
   # GET /articles/new
   def new
     @article = Article.new
